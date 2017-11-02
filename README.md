@@ -43,6 +43,3 @@ ROS notes, practical best practices
   * One ``.launch`` which includes other ``.launch.xml``
   * If a separate / different launcher is needed it should be just re-using the ``.launch.xml``
 
-# Links
-
-* http://nerve.uml.edu/ros-2014/ROS%20Best%20Practices%20-%20Tully%20Foote.pdf
