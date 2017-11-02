@@ -24,6 +24,7 @@ ROS notes, practical best practices
   * If subscribing before everything is setup things only work sometimes
 * Add a ``is init`` check in the main loop if we need some stuff being published first before we can run
 * If using nodelets with a separate running thread, subscriber callbacks are asynchronous and need locking
+* Predefined stings in messages have to be without ``"``
 
 ## Dyn reconfigure
 
