@@ -17,6 +17,13 @@ ROS notes, practical best practices
 
 * Nodelet everything, if a standalone is needed to add a launcher with a mangager + just that nodelet
 
+## C++ vs Python
+
+* Multithreading
+  * C++ by default single threaded (also sub and service callbacks)
+    * Each sub / pub / service gets served once per spin()
+  * Python uses separate threads for callback by default
+
 ## Subscribers and publishers
 
 * For publishers, check for number of subscribers first
@@ -40,7 +47,8 @@ ROS notes, practical best practices
 
 * There are always too many launch files
   * Don't get maintained and stop working at some point
-* Make one set of launch files which always get used
-  * One ``.launch`` which includes other ``.launch.xml``
-  * If a separate / different launcher is needed it should be just re-using the ``.launch.xml``
+* Parameter bash script execution hack: `<param name="$(anon hack)" command="<bash file> <args>">`
+  * Gets executed before any launcher (all parameters get loaded first)
+    * But after the roscore starts 
+  
 
